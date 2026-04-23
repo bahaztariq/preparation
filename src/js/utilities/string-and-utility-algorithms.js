@@ -345,7 +345,6 @@ const quicksort = (arr) => {
 
 const selectionsort = (arr) => {
   let min = 0 
-  let temp = 0
   for(let i = 0 ;i<arr.length;i++){
     min = i
     for(let j = i+1 ;j<arr.length;j++){
@@ -584,3 +583,22 @@ const drawPascalPyramid = (num)=>{
 }
 
 drawPascalPyramid(5)
+
+
+
+const flate = (arr)=>{
+  
+  let result = []
+  
+  for(let i = 0;i<arr.length;i++){
+    if(typeof arr[i] === "object"){
+      result.push(...flate(arr[i]))
+    }else{
+      result.push(arr[i])
+    }
+  }
+  return result
+}
+
+console.log(flate([1,3,[5,7,[8]]]))
+// Expected output : [1,3,5,7,8]

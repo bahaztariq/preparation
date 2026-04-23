@@ -14,7 +14,7 @@ This document contains 100 practical scenarios and theoretical questions to prep
 8. **Interface:** Define an interface `Exportable` with a method `toJson()`.
 9. **Polymorphism:** Create an array of different objects that all implement `Exportable` and call `toJson()` on each in a loop.
 10. **Static Methods:** Add a static method to a `Calculator` class that adds two numbers without instantiating the class.
-11. **Static Properties:** Use a static property to count how many instances of a `User` class have been created.
+11. **Static Properties:** Use a static property to count how many instances of a `Calcilator` class have been created.
 12. **Constants:** Define a `TAX_RATE` constant inside a `Billing` class.
 13. **Traits:** Create a `Logger` trait and use it in both `User` and `Order` classes.
 14. **Magic Methods:** Implement `__toString()` to return a string representation of an object.
