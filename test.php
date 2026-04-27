@@ -176,3 +176,20 @@ class Database{
       return self::$connection;
   }
 }
+
+class user{
+
+    public function users(){
+        return DB::table('users')->where('id', 1)->get();
+    }
+    public function users1(){
+        $conn = new PDO("pgsql:host=localhost;dbname=testdb", "username", "password");
+        $sql = "SELECT * FROM users where id = :id";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(['id' => 1]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function users2(){
+        return User::where('id', 1)->get();
+    }
+}
